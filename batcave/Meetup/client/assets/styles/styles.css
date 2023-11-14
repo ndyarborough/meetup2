@@ -1,0 +1,6 @@
+.react-time-picker__clock {
+    background-color: aqua;
+    z-index: 9999;
+    overflow: visible;
+    background-color: rgba(255, 255, 255, 1);
+}
