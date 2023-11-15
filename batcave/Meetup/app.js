@@ -5,12 +5,11 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config()
 const port = process.env.PORT;
-const host = process.env.DBHOST;
 
 // Initialize Express app
 const app = express();
 // Connect to MongoDB
-mongoose.connect(`mongodb://${host}/meetup`, {
+mongoose.connect(`mongodb://${process.env.DBHOST}:27017/meetup`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(res => {
@@ -33,4 +32,7 @@ const userRoutes = require('./routes/userRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 app.use('/user', userRoutes);
 app.use('/event', eventRoutes);
+
+    // Noah Was Here
+
 
